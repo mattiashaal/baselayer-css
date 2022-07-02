@@ -33,10 +33,10 @@ Frame makes its child element responsive with a set aspect ratio. Often used for
 ```scss
 // Default settings
 .frame {
-  --fit: cover;
+  --object-fit: cover;
   --ratio: 1/1;
-  --x: 50%;
-  --y: 50%;
+  --object-x: 50%;
+  --object-y: 50%;
 }
 ```
 
