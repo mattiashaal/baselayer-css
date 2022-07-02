@@ -248,4 +248,31 @@ Wrap and align content with padding.
 
 ### Utilities
 
+#### Transform
+
+```scss
+// Default settings
+.transform {
+  --rotate: 0deg;
+  --scale: 1;
+  --skew: 0deg;
+  --origin: center;
+  --translate-x: 0;
+  --translate-y: 0;
+  --translate-z: 0;
+}
+```
+
+#### Transition
+
+```scss
+// Default settings
+.transition {
+  --property: all;
+  --duration: 200ms;
+  --delay: 0ms;
+  --easing: cubic-bezier(0.5, 0, 0.25, 1);
+}
+```
+
 ### Customize
