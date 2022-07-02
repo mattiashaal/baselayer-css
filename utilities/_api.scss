@@ -1,0 +1,14 @@
+@use '../config/mixins' as mixin;
+@use '../config/variables' as variable;
+
+// ---------------------------------------------------------
+// Utilities from API
+// ---------------------------------------------------------
+
+@if variable.$output-utilities == 'true' {
+  @include mixin.generate-classes(
+    variable.$utilities-api,
+    variable.$utilities-namespace,
+    variable.$utilities-output
+  );
+}
