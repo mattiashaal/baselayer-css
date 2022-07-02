@@ -1,0 +1,17 @@
+@use '../config/variables' as variable;
+
+// ---------------------------------------------------------
+// Stack
+// Control the space between stacked child elements along
+// the y-axis.
+// ---------------------------------------------------------
+
+@if variable.$output-layouts == 'true' {
+  .#{variable.$layouts-namespace}stack {
+    --space: #{variable.$stack-space};
+
+    > * + * {
+      margin-top: var(--space);
+    }
+  }
+}

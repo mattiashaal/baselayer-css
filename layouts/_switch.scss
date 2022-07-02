@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../config/mixins' as mixin;
+@use '../config/variables' as variable;
+
+// ---------------------------------------------------------
+// Switch
+// Switch from a single column to a multi column layout when
+// the width of the parent element is equal the breakpoint.
+//
+// 1. Needs a unit so the calculation for the min-width does
+//    not break.
+// 2. Prevent a Firefox bug with vw-unit when used together
+//    with --gap.
+// ---------------------------------------------------------
+
+@if variable.$output-layouts == 'true' {
+  .#{variable.$layouts-namespace}switch {
+    --breakpoint: 0;
+    --cols: 1;
+    --gap: 0rem; // 1
+    --multiplier: 999;
+    --trim: 0.001%; // 2
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+    > * {
+      --col: var(--cols);
+      --grow: 0;
+
+      flex-grow: var(--grow);
+      flex-basis: calc((var(--breakpoint) - 100%) * var(--multiplier));
+      min-width: calc(
+        100% / var(--col) -
+        ((var(--col) - 1) * var(--gap-x, var(--gap)) / var(--col)) -
+        var(--trim)
+      );
+      max-width: 100%;
+    }
+  }
+}
