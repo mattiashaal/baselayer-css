@@ -275,4 +275,20 @@ Wrap and align content with padding.
 }
 ```
 
+#### Breakout link
+
+```scss
+// Default settings
+.breakout-link {
+  --zi: 1;
+}
+
+// Outline values are defined in :root but can be customized
+.breakout-link:focus::before {
+  --outline-width: 0.125rem;
+  --outline-type: solid;
+  --outline-color: currentColor;
+}
+```
+
 ### Customize
