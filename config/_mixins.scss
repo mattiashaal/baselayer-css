@@ -1,0 +1,65 @@
+@use 'sass:map';
+@use 'variables' as variable;
+
+// ---------------------------------------------------------
+// Sass mixins
+// ---------------------------------------------------------
+
+// Generate utility classes
+// Loop each element in the $data object and generate
+// utility classes.
+// @param {Map} $data - Config with all the classes
+// @param {String} $namespace - The namespace
+// @param {String} $output - Use standard or responsive output
+// ---------------------------------------------------------
+
+@mixin generate-classes($data, $namespace, $output) {
+  @each $id, $collection in $data {
+    $class: map.get($collection, 'class');
+    $items: map.get($collection, 'items');
+    $props: map.get($collection, 'props');
+
+    @if ($props and $items) {
+      @each $key, $value in $items {
+        .#{$namespace}#{$class}#{$key} {
+          @each $prop in $props {
+            #{$prop}: $value;
+          }
+        }
+      }
+
+      @if ($output == 'responsive') {
+        @each $breakpoint in map.keys(variable.$breakpoints) {
+          @include breakpoint($breakpoint) {
+            $prefix: #{$namespace}#{$breakpoint}-;
+
+            @each $key, $value in $items {
+              .#{$prefix}#{$class}#{$key} {
+                @each $prop in $props {
+                  #{$prop}: $value;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Breakpoint
+// Wrap the content in a media breakpoint.
+// @param {String} $width - Key from the map with breakpoints or a custom set width
+// @param {String} $type - Breakpoint type min or max
+// ---------------------------------------------------------
+
+@mixin breakpoint($width, $type: min) {
+  @if map.has-key(variable.$breakpoints, $width) {
+    $width: map.get(variable.$breakpoints, $width);
+  } @else {
+    $width: $width;
+  }
+  @media (#{$type}-width: $width) {
+    @content;
+  }
+}

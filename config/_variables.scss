@@ -1,0 +1,407 @@
+@use 'functions' as function;
+
+// ---------------------------------------------------------
+// Variables
+// ---------------------------------------------------------
+
+// Breakpoints
+// Define the minimum dimensions at which your layout will
+// change, adapting to different screen sizes, for use in
+// media queries.
+// ---------------------------------------------------------
+
+$breakpoints: (
+  sm: 30em,
+  md: 60em,
+  lg: 90em,
+) !default;
+
+// Design tokens
+// ---------------------------------------------------------
+
+// Color
+$color-primary: hsl(211, 90%, 20%) !default;
+$color-secondary: hsl(182, 27%, 80%) !default;
+$color-accent: hsl(16, 100%, 60%) !default;
+$color-dark: hsl(0, 0%, 0%) !default;
+$color-muted-dark: hsl(0, 0%, 25%) !default;
+$color-muted-light: hsl(0, 0%, 95%) !default;
+$color-light: hsl(0, 0%, 100%) !default;
+
+// Font family
+$font-sans: system-ui, sans-serif !default;
+$font-serif: serif !default;
+$font-mono: monospace !default;
+
+// Font weight
+$font-thin: 300 !default;
+$font-normal: 400 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+
+// Font size
+$text-nano: 0.625rem !default;
+$text-micro: 0.75rem !default;
+$text-tiny: function.fluid-size(0.875rem, 1rem) !default;
+$text-small: function.fluid-size(1rem, 1.25rem) !default;
+$text-medium: function.fluid-size(1.25rem, 1.5rem) !default;
+$text-large: function.fluid-size(1.5rem, 1.75rem) !default;
+$text-huge: function.fluid-size(1.75rem, 2rem) !default;
+$text-mega: function.fluid-size(2rem, 4rem) !default;
+
+// Letter spacing
+$track-small: -0.125rem !default;
+$track-medium: 0.125rem !default;
+$track-large: 0.25rem !default;
+
+// Line height
+$lead-small: 1.25 !default;
+$lead-medium: 1.75 !default;
+$lead-large: 2 !default;
+
+// Spacing
+$space-nano: 0.5rem !default;
+$space-micro: 0.75rem !default;
+$space-tiny: function.fluid-size(1rem, 1.5rem) !default;
+$space-small: function.fluid-size(2rem, 3rem) !default;
+$space-medium: function.fluid-size(3rem, 6rem) !default;
+$space-large: function.fluid-size(4rem, 8rem) !default;
+$space-huge: function.fluid-size(5rem, 10rem) !default;
+$space-mega: function.fluid-size(6rem, 12rem) !default;
+
+// Base
+// ---------------------------------------------------------
+
+// HTML
+$html-background-color: var(--color-light) !default;
+
+// Body
+$body-font-family: var(--font-sans) !default;
+$body-font-size: var(--text-tiny) !default;
+$body-font-weight: 400 !default;
+$body-font-ligatures: none !default;
+$body-color: var(--color-dark) !default;
+$body-background-color: var(--color-light) !default;
+$body-overflow-x: hidden !default;
+
+// Outline
+$outline-width: 0.125rem !default;
+$outline-type: solid !default;
+$outline-color: currentColor !default;
+
+// Border
+$border-radius: 0.125rem !default;
+
+// Layouts
+// ---------------------------------------------------------
+
+$output-layouts: 'true' !default;
+$layouts-namespace: '' !default;
+
+// Frame
+$frame-object-fit: cover !default;
+$frame-object-x: 50% !default;
+$frame-object-y: 50% !default;
+$frame-ratio: '1/1' !default;
+
+// Stack
+$stack-space: var(--space-tiny) !default;
+
+// Wrap
+$wrap-padding: clamp(2rem, 10vw, 4rem) !default;
+$wrap-max-width: 80rem !default;
+
+// Utilities
+// ---------------------------------------------------------
+
+$output-utilities: 'true' !default;
+$utilities-namespace: '' !default;
+$utilities-output: 'standard' !default;
+
+// Color
+$color: (
+  '-primary': $color-primary,
+  '-secondary': $color-secondary,
+  '-accent': $color-accent,
+  '-dark': $color-dark,
+  '-muted-dark': $color-muted-dark,
+  '-muted-light': $color-muted-light,
+  '-light': $color-light
+) !default;
+
+// Margin
+$margin: (
+  '-none': 0,
+  '-auto': auto,
+  '-nano': var(--space-nano),
+  '-micro': var(--space-micro),
+  '-tiny': var(--space-tiny),
+  '-small': var(--space-small),
+  '-medium': var(--space-medium),
+  '-large': var(--space-large),
+  '-huge': var(--space-huge),
+  '-mega': var(--space-mega),
+) !default;
+
+// Padding
+$padding: (
+  '-none': 0,
+  '-nano': var(--space-nano),
+  '-micro': var(--space-micro),
+  '-tiny': var(--space-tiny),
+  '-small': var(--space-small),
+  '-medium': var(--space-medium),
+  '-large': var(--space-large),
+  '-huge': var(--space-huge),
+  '-mega': var(--space-mega),
+) !default;
+
+// Font size
+$font-size: (
+  '-nano': var(--text-nano),
+  '-micro': var(--text-micro),
+  '-tiny': var(--text-tiny),
+  '-small': var(--text-small),
+  '-medium': var(--text-medium),
+  '-large': var(--text-large),
+  '-huge': var(--text-huge),
+  '-mega': var(--text-mega),
+) !default;
+
+// Font weight
+$font-weight: (
+  '-thin': $font-thin,
+  '-normal': $font-normal,
+  '-semibold': $font-semibold,
+  '-bold': $font-bold,
+) !default;
+
+// Font family
+$font-family: (
+  '-serif': $font-serif,
+  '-sans': $font-sans,
+  '-mono': $font-mono,
+) !default;
+
+// Letter spacing
+$letter-spacing: (
+  '-small': $track-small,
+  '-medium': $track-medium,
+  '-large': $track-large,
+) !default;
+
+// Line height
+$line-height: (
+  '-small': $lead-small,
+  '-medium': $lead-medium,
+  '-large': $lead-large,
+) !default;
+
+// Position
+$position: (
+  'relative': relative,
+) !default;
+
+// Text align
+$text-align: (
+  '-center': center,
+  '-left': left,
+  '-right': right,
+) !default;
+
+// Text transform
+$text-transform: (
+  '-caps': capitalize,
+  '-lower': lowercase,
+  '-upper': uppercase,
+) !default;
+
+// Transform
+$transform-rotate: 0deg !default;
+$transform-scale: 1 !default;
+$transform-skew: 0deg !default;
+$transform-origin: center !default;
+$transform-translate-x: 0 !default;
+$transform-translate-y: 0 !default;
+$transform-translate-z: 0 !default;
+
+// Transition
+$transition-property: all !default;
+$transition-duration: 200ms !default;
+$transition-delay: 0ms !default;
+$transition-easing: cubic-bezier(0.5, 0, 0.25, 1) !default;
+
+$utilities-api: (
+  'background-color': (
+    'class': 'background',
+    'items': $color,
+    'props': (
+      'background-color',
+    ),
+  ),
+  'color': (
+    'class': 'color',
+    'items': $color,
+    'props': (
+      'color',
+    ),
+  ),
+  'margin': (
+    'class': 'm',
+    'items': $margin,
+    'props': (
+      'margin',
+    ),
+  ),
+  'margin-top': (
+    'class': 'mt',
+    'items': $margin,
+    'props': (
+      'margin-top',
+    ),
+  ),
+  'margin-right': (
+    'class': 'mr',
+    'items': $margin,
+    'props': (
+      'margin-right',
+    ),
+  ),
+  'margin-bottom': (
+    'class': 'mb',
+    'items': $margin,
+    'props': (
+      'margin-bottom',
+    ),
+  ),
+  'margin-left': (
+    'class': 'ml',
+    'items': $margin,
+    'props': (
+      'margin-left',
+    ),
+  ),
+  'margin-x': (
+    'class': 'mx',
+    'items': $margin,
+    'props': (
+      'margin-right',
+      'margin-left',
+    ),
+  ),
+  'margin-y': (
+    'class': 'my',
+    'items': $margin,
+    'props': (
+      'margin-top',
+      'margin-bottom',
+    ),
+  ),
+  'padding': (
+    'class': 'p',
+    'items': $padding,
+    'props': (
+      'padding',
+    ),
+  ),
+  'padding-top': (
+    'class': 'pt',
+    'items': $padding,
+    'props': (
+      'padding-top',
+    ),
+  ),
+  'padding-right': (
+    'class': 'pr',
+    'items': $padding,
+    'props': (
+      'padding-right',
+    ),
+  ),
+  'padding-bottom': (
+    'class': 'pb',
+    'items': $padding,
+    'props': (
+      'padding-bottom',
+    ),
+  ),
+  'padding-left': (
+    'class': 'pl',
+    'items': $padding,
+    'props': (
+      'padding-left',
+    ),
+  ),
+  'padding-x': (
+    'class': 'px',
+    'items': $padding,
+    'props': (
+      'padding-right',
+      'padding-left',
+    ),
+  ),
+  'padding-y': (
+    'class': 'py',
+    'items': $padding,
+    'props': (
+      'padding-top',
+      'padding-bottom',
+    ),
+  ),
+  'font-size': (
+    'class': 'text',
+    'items': $font-size,
+    'props': (
+      'font-size',
+    ),
+  ),
+  'font-weight': (
+    'class': 'font',
+    'items': $font-weight,
+    'props': (
+      'font-weight',
+    ),
+  ),
+  'font-family': (
+    'class': 'font',
+    'items': $font-family,
+    'props': (
+      'font-family',
+    ),
+  ),
+  'letter-spacing': (
+    'class': 'track',
+    'items': $letter-spacing,
+    'props': (
+      'letter-spacing',
+    ),
+  ),
+  'line-height': (
+    'class': 'lead',
+    'items': $line-height,
+    'props': (
+      'line-height',
+    ),
+  ),
+  'position': (
+    'class': '',
+    'items': $position,
+    'props': (
+      'position',
+    ),
+  ),
+  'text-align': (
+    'class': 'text',
+    'items': $text-align,
+    'props': (
+      'text-align',
+    ),
+  ),
+  'text-transform': (
+    'class': 'text',
+    'items': $text-transform,
+    'props': (
+      'text-transform',
+    ),
+  ),
+) !default;

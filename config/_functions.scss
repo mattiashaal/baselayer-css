@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+// ---------------------------------------------------------
+// Sass functions
+// ---------------------------------------------------------
+
+// Fluid size
+// Clamps a value between an upper and lower bound.
+// @param {Value} $min-value - Min value to clamp from
+// @param {Value} $max-value - Max value to clamp to
+// @param {Value} $min-vw - Start flow from this viewport width
+// @param {Value} $max-vw - Stop flow at this viewport width
+// @return {Value} - Fluid value with upper and lower bound
+// ---------------------------------------------------------
+
+@function fluid-size($min-value, $max-value, $min-vw: 30rem, $max-vw: 120rem) {
+  $factor: math.div(1, ($max-vw - $min-vw)) * ($max-value - $min-value);
+  $calc-value: calc(#{$min-value - ($min-vw * $factor)} + #{100vw * $factor});
+
+  @return clamp(
+    #{if($min-value > $max-value, $max-value, $min-value)},
+    #{$calc-value},
+    #{if($min-value > $max-value, $min-value, $max-value)}
+  );
+}
