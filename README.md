@@ -306,4 +306,14 @@ Wrap and align content with padding.
 }
 ```
 
+```html
+<!-- Basic use of u-breakout-link -->
+<div
+  class="u-breakout-link"
+  style="--zi: 2; --outline-color: var(--color-accent);"
+>
+  ...
+</div>
+```
+
 ### Customize
