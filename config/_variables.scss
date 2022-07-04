@@ -11,9 +11,9 @@
 // ---------------------------------------------------------
 
 $breakpoints: (
-  sm: 30em,
-  md: 60em,
-  lg: 90em,
+	sm: 30em,
+	md: 60em,
+	lg: 90em,
 ) !default;
 
 // Design tokens
@@ -120,100 +120,100 @@ $utilities-output: 'standard' !default;
 
 // Color
 $color: (
-  '-primary': $color-primary,
-  '-secondary': $color-secondary,
-  '-accent': $color-accent,
-  '-dark': $color-dark,
-  '-muted-dark': $color-muted-dark,
-  '-muted-light': $color-muted-light,
-  '-light': $color-light
+	'-primary': $color-primary,
+	'-secondary': $color-secondary,
+	'-accent': $color-accent,
+	'-dark': $color-dark,
+	'-muted-dark': $color-muted-dark,
+	'-muted-light': $color-muted-light,
+	'-light': $color-light
 ) !default;
 
 // Margin
 $margin: (
-  '-none': 0,
-  '-auto': auto,
-  '-nano': var(--space-nano),
-  '-micro': var(--space-micro),
-  '-tiny': var(--space-tiny),
-  '-small': var(--space-small),
-  '-medium': var(--space-medium),
-  '-large': var(--space-large),
-  '-huge': var(--space-huge),
-  '-mega': var(--space-mega),
+	'-none': 0,
+	'-auto': auto,
+	'-nano': var(--space-nano),
+	'-micro': var(--space-micro),
+	'-tiny': var(--space-tiny),
+	'-small': var(--space-small),
+	'-medium': var(--space-medium),
+	'-large': var(--space-large),
+	'-huge': var(--space-huge),
+	'-mega': var(--space-mega),
 ) !default;
 
 // Padding
 $padding: (
-  '-none': 0,
-  '-nano': var(--space-nano),
-  '-micro': var(--space-micro),
-  '-tiny': var(--space-tiny),
-  '-small': var(--space-small),
-  '-medium': var(--space-medium),
-  '-large': var(--space-large),
-  '-huge': var(--space-huge),
-  '-mega': var(--space-mega),
+	'-none': 0,
+	'-nano': var(--space-nano),
+	'-micro': var(--space-micro),
+	'-tiny': var(--space-tiny),
+	'-small': var(--space-small),
+	'-medium': var(--space-medium),
+	'-large': var(--space-large),
+	'-huge': var(--space-huge),
+	'-mega': var(--space-mega),
 ) !default;
 
 // Font size
 $font-size: (
-  '-nano': var(--text-nano),
-  '-micro': var(--text-micro),
-  '-tiny': var(--text-tiny),
-  '-small': var(--text-small),
-  '-medium': var(--text-medium),
-  '-large': var(--text-large),
-  '-huge': var(--text-huge),
-  '-mega': var(--text-mega),
+	'-nano': var(--text-nano),
+	'-micro': var(--text-micro),
+	'-tiny': var(--text-tiny),
+	'-small': var(--text-small),
+	'-medium': var(--text-medium),
+	'-large': var(--text-large),
+	'-huge': var(--text-huge),
+	'-mega': var(--text-mega),
 ) !default;
 
 // Font weight
 $font-weight: (
-  '-thin': $font-thin,
-  '-normal': $font-normal,
-  '-semibold': $font-semibold,
-  '-bold': $font-bold,
+	'-thin': $font-thin,
+	'-normal': $font-normal,
+	'-semibold': $font-semibold,
+	'-bold': $font-bold,
 ) !default;
 
 // Font family
 $font-family: (
-  '-serif': $font-serif,
-  '-sans': $font-sans,
-  '-mono': $font-mono,
+	'-serif': $font-serif,
+	'-sans': $font-sans,
+	'-mono': $font-mono,
 ) !default;
 
 // Letter spacing
 $letter-spacing: (
-  '-small': $track-small,
-  '-medium': $track-medium,
-  '-large': $track-large,
+	'-small': $track-small,
+	'-medium': $track-medium,
+	'-large': $track-large,
 ) !default;
 
 // Line height
 $line-height: (
-  '-small': $lead-small,
-  '-medium': $lead-medium,
-  '-large': $lead-large,
+	'-small': $lead-small,
+	'-medium': $lead-medium,
+	'-large': $lead-large,
 ) !default;
 
 // Position
 $position: (
-  'relative': relative,
+	'relative': relative,
 ) !default;
 
 // Text align
 $text-align: (
-  '-center': center,
-  '-left': left,
-  '-right': right,
+	'-center': center,
+	'-left': left,
+	'-right': right,
 ) !default;
 
 // Text transform
 $text-transform: (
-  '-caps': capitalize,
-  '-lower': lowercase,
-  '-upper': uppercase,
+	'-caps': capitalize,
+	'-lower': lowercase,
+	'-upper': uppercase,
 ) !default;
 
 // Transform
@@ -232,176 +232,176 @@ $transition-delay: 0ms !default;
 $transition-easing: cubic-bezier(0.5, 0, 0.25, 1) !default;
 
 $utilities-api: (
-  'background-color': (
-    'class': 'background',
-    'items': $color,
-    'props': (
-      'background-color',
-    ),
-  ),
-  'color': (
-    'class': 'color',
-    'items': $color,
-    'props': (
-      'color',
-    ),
-  ),
-  'margin': (
-    'class': 'm',
-    'items': $margin,
-    'props': (
-      'margin',
-    ),
-  ),
-  'margin-top': (
-    'class': 'mt',
-    'items': $margin,
-    'props': (
-      'margin-top',
-    ),
-  ),
-  'margin-right': (
-    'class': 'mr',
-    'items': $margin,
-    'props': (
-      'margin-right',
-    ),
-  ),
-  'margin-bottom': (
-    'class': 'mb',
-    'items': $margin,
-    'props': (
-      'margin-bottom',
-    ),
-  ),
-  'margin-left': (
-    'class': 'ml',
-    'items': $margin,
-    'props': (
-      'margin-left',
-    ),
-  ),
-  'margin-x': (
-    'class': 'mx',
-    'items': $margin,
-    'props': (
-      'margin-right',
-      'margin-left',
-    ),
-  ),
-  'margin-y': (
-    'class': 'my',
-    'items': $margin,
-    'props': (
-      'margin-top',
-      'margin-bottom',
-    ),
-  ),
-  'padding': (
-    'class': 'p',
-    'items': $padding,
-    'props': (
-      'padding',
-    ),
-  ),
-  'padding-top': (
-    'class': 'pt',
-    'items': $padding,
-    'props': (
-      'padding-top',
-    ),
-  ),
-  'padding-right': (
-    'class': 'pr',
-    'items': $padding,
-    'props': (
-      'padding-right',
-    ),
-  ),
-  'padding-bottom': (
-    'class': 'pb',
-    'items': $padding,
-    'props': (
-      'padding-bottom',
-    ),
-  ),
-  'padding-left': (
-    'class': 'pl',
-    'items': $padding,
-    'props': (
-      'padding-left',
-    ),
-  ),
-  'padding-x': (
-    'class': 'px',
-    'items': $padding,
-    'props': (
-      'padding-right',
-      'padding-left',
-    ),
-  ),
-  'padding-y': (
-    'class': 'py',
-    'items': $padding,
-    'props': (
-      'padding-top',
-      'padding-bottom',
-    ),
-  ),
-  'font-size': (
-    'class': 'text',
-    'items': $font-size,
-    'props': (
-      'font-size',
-    ),
-  ),
-  'font-weight': (
-    'class': 'font',
-    'items': $font-weight,
-    'props': (
-      'font-weight',
-    ),
-  ),
-  'font-family': (
-    'class': 'font',
-    'items': $font-family,
-    'props': (
-      'font-family',
-    ),
-  ),
-  'letter-spacing': (
-    'class': 'track',
-    'items': $letter-spacing,
-    'props': (
-      'letter-spacing',
-    ),
-  ),
-  'line-height': (
-    'class': 'lead',
-    'items': $line-height,
-    'props': (
-      'line-height',
-    ),
-  ),
-  'position': (
-    'class': '',
-    'items': $position,
-    'props': (
-      'position',
-    ),
-  ),
-  'text-align': (
-    'class': 'text',
-    'items': $text-align,
-    'props': (
-      'text-align',
-    ),
-  ),
-  'text-transform': (
-    'class': 'text',
-    'items': $text-transform,
-    'props': (
-      'text-transform',
-    ),
-  ),
+	'background-color': (
+		'class': 'background',
+		'items': $color,
+		'props': (
+			'background-color',
+		),
+	),
+	'color': (
+		'class': 'color',
+		'items': $color,
+		'props': (
+			'color',
+		),
+	),
+	'margin': (
+		'class': 'm',
+		'items': $margin,
+		'props': (
+			'margin',
+		),
+	),
+	'margin-top': (
+		'class': 'mt',
+		'items': $margin,
+		'props': (
+			'margin-top',
+		),
+	),
+	'margin-right': (
+		'class': 'mr',
+		'items': $margin,
+		'props': (
+			'margin-right',
+		),
+	),
+	'margin-bottom': (
+		'class': 'mb',
+		'items': $margin,
+		'props': (
+			'margin-bottom',
+		),
+	),
+	'margin-left': (
+		'class': 'ml',
+		'items': $margin,
+		'props': (
+			'margin-left',
+		),
+	),
+	'margin-x': (
+		'class': 'mx',
+		'items': $margin,
+		'props': (
+			'margin-right',
+			'margin-left',
+		),
+	),
+	'margin-y': (
+		'class': 'my',
+		'items': $margin,
+		'props': (
+			'margin-top',
+			'margin-bottom',
+		),
+	),
+	'padding': (
+		'class': 'p',
+		'items': $padding,
+		'props': (
+			'padding',
+		),
+	),
+	'padding-top': (
+		'class': 'pt',
+		'items': $padding,
+		'props': (
+			'padding-top',
+		),
+	),
+	'padding-right': (
+		'class': 'pr',
+		'items': $padding,
+		'props': (
+			'padding-right',
+		),
+	),
+	'padding-bottom': (
+		'class': 'pb',
+		'items': $padding,
+		'props': (
+			'padding-bottom',
+		),
+	),
+	'padding-left': (
+		'class': 'pl',
+		'items': $padding,
+		'props': (
+			'padding-left',
+		),
+	),
+	'padding-x': (
+		'class': 'px',
+		'items': $padding,
+		'props': (
+			'padding-right',
+			'padding-left',
+		),
+	),
+	'padding-y': (
+		'class': 'py',
+		'items': $padding,
+		'props': (
+			'padding-top',
+			'padding-bottom',
+		),
+	),
+	'font-size': (
+		'class': 'text',
+		'items': $font-size,
+		'props': (
+			'font-size',
+		),
+	),
+	'font-weight': (
+		'class': 'font',
+		'items': $font-weight,
+		'props': (
+			'font-weight',
+		),
+	),
+	'font-family': (
+		'class': 'font',
+		'items': $font-family,
+		'props': (
+			'font-family',
+		),
+	),
+	'letter-spacing': (
+		'class': 'track',
+		'items': $letter-spacing,
+		'props': (
+			'letter-spacing',
+		),
+	),
+	'line-height': (
+		'class': 'lead',
+		'items': $line-height,
+		'props': (
+			'line-height',
+		),
+	),
+	'position': (
+		'class': '',
+		'items': $position,
+		'props': (
+			'position',
+		),
+	),
+	'text-align': (
+		'class': 'text',
+		'items': $text-align,
+		'props': (
+			'text-align',
+		),
+	),
+	'text-transform': (
+		'class': 'text',
+		'items': $text-transform,
+		'props': (
+			'text-transform',
+		),
+	),
 ) !default;

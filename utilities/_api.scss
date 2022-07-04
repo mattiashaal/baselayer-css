@@ -6,9 +6,9 @@
 // ---------------------------------------------------------
 
 @if variable.$output-utilities == 'true' {
-  @include mixin.generate-classes(
-    variable.$utilities-api,
-    variable.$utilities-namespace,
-    variable.$utilities-output
-  );
+	@include mixin.generate-classes(
+		variable.$utilities-api,
+		variable.$utilities-namespace,
+		variable.$utilities-output
+	);
 }

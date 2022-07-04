@@ -5,45 +5,45 @@
 // ---------------------------------------------------------
 
 :root {
-  // Color
-  --color-primary: #{variable.$color-primary};
-  --color-secondary: #{variable.$color-secondary};
-  --color-accent: #{variable.$color-accent};
-  --color-dark: #{variable.$color-dark};
-  --color-muted-dark: #{variable.$color-muted-dark};
-  --color-muted-light: #{variable.$color-muted-light};
-  --color-light: #{variable.$color-light};
+	// Color
+	--color-primary: #{variable.$color-primary};
+	--color-secondary: #{variable.$color-secondary};
+	--color-accent: #{variable.$color-accent};
+	--color-dark: #{variable.$color-dark};
+	--color-muted-dark: #{variable.$color-muted-dark};
+	--color-muted-light: #{variable.$color-muted-light};
+	--color-light: #{variable.$color-light};
 
-  // Font family
-  --font-sans: #{variable.$font-sans};
-  --font-serif: #{variable.$font-serif};
-  --font-mono: #{variable.$font-mono};
+	// Font family
+	--font-sans: #{variable.$font-sans};
+	--font-serif: #{variable.$font-serif};
+	--font-mono: #{variable.$font-mono};
 
-  // Font size
-  --text-nano: #{variable.$text-nano};
-  --text-micro: #{variable.$text-micro};
-  --text-tiny: #{variable.$text-tiny};
-  --text-small: #{variable.$text-small};
-  --text-medium: #{variable.$text-medium};
-  --text-large: #{variable.$text-large};
-  --text-huge: #{variable.$text-huge};
-  --text-mega: #{variable.$text-mega};
+	// Font size
+	--text-nano: #{variable.$text-nano};
+	--text-micro: #{variable.$text-micro};
+	--text-tiny: #{variable.$text-tiny};
+	--text-small: #{variable.$text-small};
+	--text-medium: #{variable.$text-medium};
+	--text-large: #{variable.$text-large};
+	--text-huge: #{variable.$text-huge};
+	--text-mega: #{variable.$text-mega};
 
-  // Spacing
-  --space-nano: #{variable.$space-nano};
-  --space-micro: #{variable.$space-micro};
-  --space-tiny: #{variable.$space-tiny};
-  --space-small: #{variable.$space-small};
-  --space-medium: #{variable.$space-medium};
-  --space-large: #{variable.$space-large};
-  --space-huge: #{variable.$space-huge};
-  --space-mega: #{variable.$space-mega};
+	// Spacing
+	--space-nano: #{variable.$space-nano};
+	--space-micro: #{variable.$space-micro};
+	--space-tiny: #{variable.$space-tiny};
+	--space-small: #{variable.$space-small};
+	--space-medium: #{variable.$space-medium};
+	--space-large: #{variable.$space-large};
+	--space-huge: #{variable.$space-huge};
+	--space-mega: #{variable.$space-mega};
 
-  // Outline
-  --outline-width: #{variable.$outline-width};
-  --outline-type: #{variable.$outline-type};
-  --outline-color: #{variable.$outline-color};
+	// Outline
+	--outline-width: #{variable.$outline-width};
+	--outline-type: #{variable.$outline-type};
+	--outline-color: #{variable.$outline-color};
 
-  // Border
-  --border-radius: #{variable.$border-radius};
+	// Border
+	--border-radius: #{variable.$border-radius};
 }

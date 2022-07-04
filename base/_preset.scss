@@ -10,46 +10,46 @@
 // ---------------------------------------------------------
 
 html {
-  background-color: variable.$html-background-color;
+	background-color: variable.$html-background-color;
 }
 
 body {
-  font-family: variable.$body-font-family;
-  font-size: variable.$body-font-size;
-  font-weight: variable.$body-font-weight;
-  font-variant-ligatures: variable.$body-font-ligatures;
-  color: variable.$body-color;
-  background-color: variable.$body-background-color;
-  overflow-x: variable.$body-overflow-x;
+	font-family: variable.$body-font-family;
+	font-size: variable.$body-font-size;
+	font-weight: variable.$body-font-weight;
+	font-variant-ligatures: variable.$body-font-ligatures;
+	color: variable.$body-color;
+	background-color: variable.$body-background-color;
+	overflow-x: variable.$body-overflow-x;
 }
 
 // Typography
 // ---------------------------------------------------------
 
 h1 {
-  font-size: variable.$text-mega;
+	font-size: variable.$text-mega;
 }
 
 h2 {
-  font-size: variable.$text-huge;
+	font-size: variable.$text-huge;
 }
 
 h3 {
-  font-size: variable.$text-large;
+	font-size: variable.$text-large;
 }
 
 h4 {
-  font-size: variable.$text-medium;
+	font-size: variable.$text-medium;
 }
 
 h5 {
-  font-size: variable.$text-small;
+	font-size: variable.$text-small;
 }
 
 h6 {
-  font-size: variable.$text-micro;
+	font-size: variable.$text-micro;
 }
 
 p {
-  font-size: variable.$text-tiny;
+	font-size: variable.$text-tiny;
 }

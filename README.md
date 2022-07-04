@@ -230,19 +230,19 @@ Wrap and align content with padding.
 ```html
 <!-- Wrap page content with default settings -->
 <div class="wrap">
-  <header>...</header>
-  <main>...</min>
-  <footer>...</footer>
+	<header>...</header>
+	<main>...</min>
+	<footer>...</footer>
 </div>
 
 <!-- Wrap an article to a more readable length -->
 <div class="wrap" style="--max-width: 40rem;">
-  <article>...</article>
+	<article>...</article>
 </div>
 
 <!-- Wrap an element without padding -->
 <div class="wrap" style="--padding: 0;">
-  <div>...</div>
+	<div>...</div>
 </div>
 ```
 

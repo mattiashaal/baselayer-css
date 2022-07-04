@@ -7,11 +7,11 @@
 // ---------------------------------------------------------
 
 @if variable.$output-layouts == 'true' {
-  .#{variable.$layouts-namespace}stack {
-    --space: #{variable.$stack-space};
+	.#{variable.$layouts-namespace}stack {
+		--space: #{variable.$stack-space};
 
-    > * + * {
-      margin-top: var(--space);
-    }
-  }
+		> * + * {
+			margin-top: var(--space);
+		}
+	}
 }

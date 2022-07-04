@@ -14,37 +14,37 @@
 // ---------------------------------------------------------
 
 @mixin generate-classes($data, $namespace, $output) {
-  @each $id, $collection in $data {
-    $class: map.get($collection, 'class');
-    $items: map.get($collection, 'items');
-    $props: map.get($collection, 'props');
+	@each $id, $collection in $data {
+		$class: map.get($collection, 'class');
+		$items: map.get($collection, 'items');
+		$props: map.get($collection, 'props');
 
-    @if ($props and $items) {
-      @each $key, $value in $items {
-        .#{$namespace}#{$class}#{$key} {
-          @each $prop in $props {
-            #{$prop}: $value;
-          }
-        }
-      }
+		@if ($props and $items) {
+			@each $key, $value in $items {
+				.#{$namespace}#{$class}#{$key} {
+					@each $prop in $props {
+						#{$prop}: $value;
+					}
+				}
+			}
 
-      @if ($output == 'responsive') {
-        @each $breakpoint in map.keys(variable.$breakpoints) {
-          @include breakpoint($breakpoint) {
-            $prefix: #{$namespace}#{$breakpoint}-;
+			@if ($output == 'responsive') {
+				@each $breakpoint in map.keys(variable.$breakpoints) {
+					@include breakpoint($breakpoint) {
+						$prefix: #{$namespace}#{$breakpoint}-;
 
-            @each $key, $value in $items {
-              .#{$prefix}#{$class}#{$key} {
-                @each $prop in $props {
-                  #{$prop}: $value;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+						@each $key, $value in $items {
+							.#{$prefix}#{$class}#{$key} {
+								@each $prop in $props {
+									#{$prop}: $value;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Breakpoint
@@ -54,12 +54,12 @@
 // ---------------------------------------------------------
 
 @mixin breakpoint($width, $type: min) {
-  @if map.has-key(variable.$breakpoints, $width) {
-    $width: map.get(variable.$breakpoints, $width);
-  } @else {
-    $width: $width;
-  }
-  @media (#{$type}-width: $width) {
-    @content;
-  }
+	@if map.has-key(variable.$breakpoints, $width) {
+		$width: map.get(variable.$breakpoints, $width);
+	} @else {
+		$width: $width;
+	}
+	@media (#{$type}-width: $width) {
+		@content;
+	}
 }

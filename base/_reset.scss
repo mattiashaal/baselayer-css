@@ -11,13 +11,13 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
-  margin: 0; // 2
-  padding: 0; // 2
+	box-sizing: border-box; // 1
+	margin: 0; // 2
+	padding: 0; // 2
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 // 1. Add accessible line-height
@@ -25,11 +25,11 @@ html {
 // 3. Prevent adjustments of font size after orientation
 //		changes in iOS
 body {
-  line-height: 1.5; // 1
-  text-rendering: optimizeSpeed; // 2
-  -moz-osx-font-smoothing: grayscale; // 2
-  -webkit-font-smoothing: antialiased; // 2
-  -webkit-text-size-adjust: 100%; // 3
+	line-height: 1.5; // 1
+	text-rendering: optimizeSpeed; // 2
+	-moz-osx-font-smoothing: grayscale; // 2
+	-webkit-font-smoothing: antialiased; // 2
+	-webkit-text-size-adjust: 100%; // 3
 }
 
 // Typography
@@ -44,13 +44,13 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 // Set default link styles
 a {
-  color: currentColor;
-  text-decoration-skip-ink: auto;
+	color: currentColor;
+	text-decoration-skip-ink: auto;
 }
 
 // Remove built-in form typography styles
@@ -58,7 +58,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 // Grouping
@@ -67,13 +67,13 @@ select {
 // Remove list styles with list role attribute
 ol[role='list'],
 ul[role='list'] {
-  list-style: none;
+	list-style: none;
 }
 
 // Add padding when using list styles
 ol:not([role='list']),
 ul:not([role='list']) {
-  padding-inline-start: 1rem;
+	padding-inline-start: 1rem;
 }
 
 // Media
@@ -84,13 +84,13 @@ img,
 picture,
 canvas,
 video {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 // Remove the default border on iframe
 iframe {
-  border: 0;
+	border: 0;
 }
 
 // Tables
@@ -99,8 +99,8 @@ iframe {
 // 1. Prevent double borders
 // 2. Set default position for caption
 table {
-  border-collapse: collapse; // 1
-  caption-side: bottom; // 2
+	border-collapse: collapse; // 1
+	caption-side: bottom; // 2
 }
 
 // Set table border defaults
@@ -110,16 +110,16 @@ tfoot,
 th,
 tr,
 td {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
+	border-color: inherit;
+	border-style: solid;
+	border-width: 0;
 }
 
 // 1. Matches default alignment
 // 2. Fix alignment for Safari
 th {
-  text-align: inherit; // 1
-  text-align: -webkit-match-parent; // 2
+	text-align: inherit; // 1
+	text-align: -webkit-match-parent; // 2
 }
 
 // Forms
@@ -131,12 +131,12 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  appearance: button;
-  -webkit-appearance: button;
+	appearance: button;
+	-webkit-appearance: button;
 }
 
 fieldset {
-  border: none;
+	border: none;
 }
 
 // Accessibility
@@ -145,16 +145,16 @@ fieldset {
 // Remove animations and transitions for users that don't
 // want it
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto !important;
-  }
+	html {
+		scroll-behavior: auto !important;
+	}
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }

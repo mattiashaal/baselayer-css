@@ -8,95 +8,95 @@
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}breakout-link {
-  --zi: 1;
+	--zi: 1;
 
-  position: static;
+	position: static;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: var(--zi);
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: var(--zi);
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
 
-  &:focus {
-    outline: none;
+	&:focus {
+		outline: none;
 
-    &::before {
-      outline: var(--outline-width) var(--outline-type) var(--outline-color);
-    }
-  }
+		&::before {
+			outline: var(--outline-width) var(--outline-type) var(--outline-color);
+		}
+	}
 }
 
 // Hide visually
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}hide-visually {
-  position: absolute;
-  width: 1px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+	position: absolute;
+	width: 1px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
 }
 
 // Line truncate
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}line-truncate {
-  --lines: 3;
+	--lines: 3;
 
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--lines);
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: var(--lines);
 }
 
 // Text truncate
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 // Transform
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}transform {
-  --rotate: #{variable.$transform-rotate};
-  --scale: #{variable.$transform-scale};
-  --skew: #{variable.$transform-skew};
-  --origin: #{variable.$transform-origin};
-  --translate-x: #{variable.$transform-translate-x};
-  --translate-y: #{variable.$transform-translate-y};
-  --translate-z: #{variable.$transform-translate-z};
+	--rotate: #{variable.$transform-rotate};
+	--scale: #{variable.$transform-scale};
+	--skew: #{variable.$transform-skew};
+	--origin: #{variable.$transform-origin};
+	--translate-x: #{variable.$transform-translate-x};
+	--translate-y: #{variable.$transform-translate-y};
+	--translate-z: #{variable.$transform-translate-z};
 
-  transform: rotate(var(--rotate)) scale(var(--scale)) skew(var(--skew))
-    translate3d(var(--translate-x), var(--translate-y), var(--translate-z));
-  transform-origin: var(--origin);
+	transform: rotate(var(--rotate)) scale(var(--scale)) skew(var(--skew))
+		translate3d(var(--translate-x), var(--translate-y), var(--translate-z));
+	transform-origin: var(--origin);
 }
 
 // Transition
 // ---------------------------------------------------------
 
 .#{variable.$utilities-namespace}transition {
-  --property: #{variable.$transition-property};
-  --duration: #{variable.$transition-duration};
-  --delay: #{variable.$transition-delay};
-  --easing: #{variable.$transition-easing};
+	--property: #{variable.$transition-property};
+	--duration: #{variable.$transition-duration};
+	--delay: #{variable.$transition-delay};
+	--easing: #{variable.$transition-easing};
 
-  transition-property: var(--property);
-  transition-duration: var(--duration);
-  transition-delay: var(--delay);
-  transition-timing-function: var(--easing);
+	transition-property: var(--property);
+	transition-duration: var(--duration);
+	transition-delay: var(--delay);
+	transition-timing-function: var(--easing);
 }

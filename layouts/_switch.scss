@@ -8,35 +8,35 @@
 // the width of the parent element is equal the breakpoint.
 //
 // 1. Needs a unit so the calculation for the min-width does
-//    not break.
+//		not break.
 // 2. Prevent a Firefox bug with vw-unit when used together
-//    with --gap.
+//		with --gap.
 // ---------------------------------------------------------
 
 @if variable.$output-layouts == 'true' {
-  .#{variable.$layouts-namespace}switch {
-    --breakpoint: 0;
-    --cols: 1;
-    --gap: 0rem; // 1
-    --multiplier: 999;
-    --trim: 0.001%; // 2
+	.#{variable.$layouts-namespace}switch {
+		--breakpoint: 0;
+		--cols: 1;
+		--gap: 0rem; // 1
+		--multiplier: 999;
+		--trim: 0.001%; // 2
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap);
 
-    > * {
-      --col: var(--cols);
-      --grow: 0;
+		> * {
+			--col: var(--cols);
+			--grow: 0;
 
-      flex-grow: var(--grow);
-      flex-basis: calc((var(--breakpoint) - 100%) * var(--multiplier));
-      min-width: calc(
-        100% / var(--col) -
-        ((var(--col) - 1) * var(--gap-x, var(--gap)) / var(--col)) -
-        var(--trim)
-      );
-      max-width: 100%;
-    }
-  }
+			flex-grow: var(--grow);
+			flex-basis: calc((var(--breakpoint) - 100%) * var(--multiplier));
+			min-width: calc(
+				100% / var(--col) -
+				((var(--col) - 1) * var(--gap-x, var(--gap)) / var(--col)) -
+				var(--trim)
+			);
+			max-width: 100%;
+		}
+	}
 }

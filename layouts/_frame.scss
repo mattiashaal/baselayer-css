@@ -9,50 +9,50 @@
 // ---------------------------------------------------------
 
 @if variable.$output-layouts == 'true' {
-  .#{variable.$layouts-namespace}frame {
-    --object-fit: #{variable.$frame-object-fit};
-    --object-x: #{variable.$frame-object-x};
-    --object-y: #{variable.$frame-object-y};
-    --ratio: #{variable.$frame-ratio};
+	.#{variable.$layouts-namespace}frame {
+		--object-fit: #{variable.$frame-object-fit};
+		--object-x: #{variable.$frame-object-x};
+		--object-y: #{variable.$frame-object-y};
+		--ratio: #{variable.$frame-ratio};
 
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
 
-    @supports (aspect-ratio: var(--ratio)) {
-      aspect-ratio: var(--ratio);
-    }
+		@supports (aspect-ratio: var(--ratio)) {
+			aspect-ratio: var(--ratio);
+		}
 
-    @supports not (aspect-ratio: var(--ratio)) {
-      padding-bottom: calc(100% / (var(--ratio)));
-    }
+		@supports not (aspect-ratio: var(--ratio)) {
+			padding-bottom: calc(100% / (var(--ratio)));
+		}
 
-    > * {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: var(--object-fit);
-      object-position: var(--object-x) var(--object-y);
-    }
+		> * {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: var(--object-fit);
+			object-position: var(--object-x) var(--object-y);
+		}
 
-    $prev-breakpoint: null;
-    @each $breakpoint in map.keys(variable.$breakpoints) {
-      @include mixin.breakpoint($breakpoint) {
-        --#{$breakpoint}-ratio: var(--#{$prev-breakpoint}-ratio);
+		$prev-breakpoint: null;
+		@each $breakpoint in map.keys(variable.$breakpoints) {
+			@include mixin.breakpoint($breakpoint) {
+				--#{$breakpoint}-ratio: var(--#{$prev-breakpoint}-ratio);
 
-        @supports (aspect-ratio: var(--ratio)) {
-          aspect-ratio: var(--#{$breakpoint}-ratio);
-        }
+				@supports (aspect-ratio: var(--ratio)) {
+					aspect-ratio: var(--#{$breakpoint}-ratio);
+				}
 
-        @supports not (aspect-ratio: var(--ratio)) {
-          padding-bottom: calc(100% / (var(--#{$breakpoint}-ratio)));
-        }
-      }
-      $prev-breakpoint: #{$breakpoint}-;
-    }
-  }
+				@supports not (aspect-ratio: var(--ratio)) {
+					padding-bottom: calc(100% / (var(--#{$breakpoint}-ratio)));
+				}
+			}
+			$prev-breakpoint: #{$breakpoint}-;
+		}
+	}
 }
