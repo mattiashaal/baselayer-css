@@ -252,7 +252,7 @@ Wrap and align content with padding.
 
 ```scss
 // Default settings
-.transform {
+.u-transform {
   --rotate: 0deg;
   --scale: 1;
   --skew: 0deg;
@@ -264,15 +264,15 @@ Wrap and align content with padding.
 ```
 
 ```html
-<!-- Basic use of transform -->
-<div class="transform" style="--translate-x: -50%;">...</div>
+<!-- Basic use of u-transform -->
+<div class="u-transform" style="--translate-x: -50%;">...</div>
 ```
 
 #### Transition
 
 ```scss
 // Default settings
-.transition {
+.u-transition {
   --property: all;
   --duration: 200ms;
   --delay: 0ms;
@@ -281,9 +281,9 @@ Wrap and align content with padding.
 ```
 
 ```html
-<!-- Basic use of transition -->
+<!-- Basic use of u-transition -->
 <div
-  class="transition"
+  class="u-transition"
   style="--property: opacity; --duration: 300ms; --easing: ease-out;"
 >
   ...
@@ -294,12 +294,12 @@ Wrap and align content with padding.
 
 ```scss
 // Default settings
-.breakout-link {
+.u-breakout-link {
   --zi: 1;
 }
 
 // Outline values are defined in :root but can be customized
-.breakout-link:focus::before {
+.u-breakout-link:focus::before {
   --outline-width: 0.125rem;
   --outline-type: solid;
   --outline-color: currentColor;
