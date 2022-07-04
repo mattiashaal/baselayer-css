@@ -295,7 +295,7 @@ Wrap and align content with padding.
 ```scss
 // Default settings
 .u-breakout-link {
-  --zi: 1;
+  --z-index: 1;
 }
 
 // Outline values are defined in :root but can be customized
@@ -310,7 +310,7 @@ Wrap and align content with padding.
 <!-- Basic use of u-breakout-link -->
 <div
   class="u-breakout-link"
-  style="--zi: 2; --outline-color: var(--color-accent);"
+  style="--z-index: 2; --outline-color: var(--color-accent);"
 >
   ...
 </div>
