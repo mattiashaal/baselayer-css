@@ -263,6 +263,11 @@ Wrap and align content with padding.
 }
 ```
 
+```html
+<!-- Basic use of transform -->
+<div class="transform" style="--translate-x: -50%;">...</div>
+```
+
 #### Transition
 
 ```scss
