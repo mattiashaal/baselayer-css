@@ -214,6 +214,8 @@ Switch from a single column to a multi column layout when the width of the paren
 </div>
 ```
 
+When using different gap values for row and column with Switch, you need to define `--gap-x` to get the correct column width.
+
 #### Wrap
 
 Wrap and align content with padding.
