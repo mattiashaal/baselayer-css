@@ -280,6 +280,16 @@ Wrap and align content with padding.
 }
 ```
 
+```html
+<!-- Basic use of transition -->
+<div
+  class="transform"
+  style="--property: opacity; --duration: 300ms; --easing: ease-out;"
+>
+  ...
+</div>
+```
+
 #### Breakout link
 
 ```scss
