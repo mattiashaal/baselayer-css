@@ -283,7 +283,7 @@ Wrap and align content with padding.
 ```html
 <!-- Basic use of transition -->
 <div
-  class="transform"
+  class="transition"
   style="--property: opacity; --duration: 300ms; --easing: ease-out;"
 >
   ...
