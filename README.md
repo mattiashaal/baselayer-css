@@ -187,7 +187,7 @@ Control the space between stacked child elements along the y-axis.
 
 #### Switch
 
-Switch from a single column to a multi column layout when the width of the parent element is equal the breakpoint.
+Switch from a single column to a multi column layout when the width of the parent element is equal the breakpoint. When using different gap values for row and column, you need to define `--gap-x` to get the correct column width.
 
 ```scss
 // Default settings
@@ -213,8 +213,6 @@ Switch from a single column to a multi column layout when the width of the paren
   <div>...</div>
 </div>
 ```
-
-When using different gap values for row and column with Switch, you need to define `--gap-x` to get the correct column width.
 
 #### Wrap
 
